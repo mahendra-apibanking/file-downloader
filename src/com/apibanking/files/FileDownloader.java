@@ -17,14 +17,14 @@ import java.util.List;
 public class FileDownloader {
 
 	public static void main(String[] args) {
-		
-		if(args == null || args.length < 2) {
+
+		if (args == null || args.length < 2) {
 			System.out.println("Please provide program arguments: urlListFile & outputFolder");
 			System.exit(0);
 		}
 
-    	String urlListFile = args[0];
-    	String outputFolder = args[1];
+		String urlListFile = args[0];
+		String outputFolder = args[1];
 
 //		String wsdlListFilePath = "/Users/mayu/startup/code/WSDLDownloader/filelist.txt";
 //		String outputFolder = "/Users/mayu/startup/code/WSDLDownloader/output";
@@ -34,7 +34,7 @@ public class FileDownloader {
 		if (!outputFolder.endsWith(getPathSeparator(outputFolder))) {
 			outputFolder = outputFolder + getPathSeparator(outputFolder);
 		}
-		
+
 		List<String> failedDownloads = new ArrayList<String>();
 
 		try {
@@ -65,7 +65,6 @@ public class FileDownloader {
 		String serviceName;
 
 		serviceName = url.substring(url.lastIndexOf(getPathSeparator(url)) + 1, url.lastIndexOf("?"));
-		System.out.println(serviceName);
 
 		return serviceName;
 	}
