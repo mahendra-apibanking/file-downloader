@@ -17,6 +17,11 @@ import java.util.List;
 public class FileDownloader {
 
 	public static void main(String[] args) {
+		
+		if(args == null || args.length < 2) {
+			System.out.println("Please provide program arguments: urlListFile & outputFolder");
+			System.exit(0);
+		}
 
     	String urlListFile = args[0];
     	String outputFolder = args[1];
