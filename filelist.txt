@@ -1,0 +1,2 @@
+http://www.dneonline.com/calculator.asmx?WSDL
+http://www.dneonline.com/calculator.asmx1?WSDL
